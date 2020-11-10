@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TestApp</string>
+
+    <string name="label_first">First Activity</string>
+    <string name="label_second">Second Activity</string>
+    <string name="label_start">START</string>
+    <string name="label_close">CLOSE</string>
+    <string name="label_loading">Loading...</string>
 </resources>
