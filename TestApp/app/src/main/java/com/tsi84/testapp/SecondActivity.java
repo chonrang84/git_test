@@ -33,10 +33,10 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_start:
-//                updateImage();
+                updateImage();
 //                updateImageRunnable04();
-                UpdateImageTask task = new UpdateImageTask();
-                task.execute(R.drawable.flo);
+//                UpdateImageTask task = new UpdateImageTask();
+//                task.execute(R.drawable.flo);
                 break;
 
             case R.id.btn_close:
