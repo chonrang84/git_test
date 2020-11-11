@@ -22,4 +22,9 @@
         android:layout_height="wrap_content"
         android:text="@string/label_close" />
 
+    <ImageView
+        android:id="@+id/img_sample"
+        android:layout_width="@dimen/image_sample_size"
+        android:layout_height="@dimen/image_sample_size" />
+
 </LinearLayout>

@@ -9,7 +9,7 @@ import com.tsi84.testapp.R;
 
 public class LoadingDialog extends Dialog {
 
-	private TextView textMessage;
+	private TextView mTextMessage;
 
 	public LoadingDialog(Context context) {
 		this(context, null);
@@ -23,10 +23,16 @@ public class LoadingDialog extends Dialog {
 
 		// layout
 		setContentView(R.layout.loading_dialog);
-		textMessage = (TextView) findViewById(R.id.progress_text);
+		mTextMessage = (TextView) findViewById(R.id.progress_text);
 
 		if (message != null) {
-			textMessage.setText(message);
+			mTextMessage.setText(message);
+		}
+	}
+
+	public void setTextMessage(String message) {
+		if (mTextMessage != null) {
+			mTextMessage.setText(message);
 		}
 	}
 }

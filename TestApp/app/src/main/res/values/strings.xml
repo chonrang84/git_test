@@ -6,4 +6,5 @@
     <string name="label_start">START</string>
     <string name="label_close">CLOSE</string>
     <string name="label_loading">Loading...</string>
+    <string name="message_image_loading">Preparing Bitmap sample...</string>
 </resources>

@@ -1,8 +1,11 @@
 package com.tsi84.testapp;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+
+import com.tsi84.testapp.model.ConstVariables;
 
 public class FirstActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = FirstActivity.class.getSimpleName();
@@ -27,6 +30,7 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener 
         switch (v.getId()) {
             case R.id.btn_start:
                 showLoadingDialog();
+                new Handler().postDelayed(mRunnableHideDialog, ConstVariables.VALUE_OF_MAX_LOADING);
                 break;
 
             case R.id.btn_close:
@@ -34,4 +38,11 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener 
                 break;
         }
     }
+
+    Runnable mRunnableHideDialog = new Runnable() {
+        @Override
+        public void run() {
+            hideLoadingDialog();
+        }
+    };
 }

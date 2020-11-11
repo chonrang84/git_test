@@ -30,4 +30,10 @@ public class BaseActivity extends Activity {
         mLoadingDialog = null;
     }
 
+    protected void setLoadingDialogText(String string) {
+        if (mLoadingDialog != null && mLoadingDialog.isShowing()) {
+            mLoadingDialog.setTextMessage(string);
+        }
+    }
+
 }

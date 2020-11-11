@@ -6,8 +6,8 @@
 
     <ProgressBar
         android:id="@+id/progress_bar"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="@dimen/progressbar_size"
+        android:layout_height="@dimen/progressbar_size"
         android:layout_centerInParent="true" />
 
     <TextView
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/progress_bar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:textSize="20dip" />
+        android:layout_marginTop="@dimen/progressbar_text_marginTop"
+        android:textSize="@dimen/font_size_20" />
 
 </RelativeLayout>
