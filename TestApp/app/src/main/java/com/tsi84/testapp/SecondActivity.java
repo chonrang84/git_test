@@ -11,6 +11,8 @@ import android.widget.ImageView;
 
 import com.tsi84.testapp.model.ConstVariables;
 
+import java.util.concurrent.Executor;
+
 public class SecondActivity extends BaseActivity implements View.OnClickListener {
     private static final String TAG = SecondActivity.class.getSimpleName();
 
@@ -33,10 +35,18 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_start:
-                updateImage();
+                // normal
+//                updateImage();
+                // runnable
 //                updateImageRunnable04();
-//                UpdateImageTask task = new UpdateImageTask();
-//                task.execute(R.drawable.flo);
+
+                // AsyncTask
+                UpdateImageTask task = new UpdateImageTask();
+                task.execute(R.drawable.flo);
+                // serial process
+//                task.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, R.drawable.flo);
+                // parallel process
+//                task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, R.drawable.flo);
                 break;
 
             case R.id.btn_close:
