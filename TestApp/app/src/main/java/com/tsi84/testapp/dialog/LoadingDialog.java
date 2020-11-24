@@ -26,7 +26,7 @@ public class LoadingDialog extends Dialog {
 		mTextMessage = (TextView) findViewById(R.id.progress_text);
 
 		if (message != null) {
-			mTextMessage.setText(message);
+			setTextMessage(message);
 		}
 	}
 

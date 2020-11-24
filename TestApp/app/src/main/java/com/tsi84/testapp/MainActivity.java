@@ -12,6 +12,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     Button mBtnFirst;
     Button mBtnSecond;
+    Button mBtnThird;
     Button mBtnClose;
 
     @Override
@@ -24,6 +25,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         mBtnSecond = findViewById(R.id.btn_second);
         mBtnSecond.setOnClickListener(this);
+
+        mBtnThird = findViewById(R.id.btn_third);
+        mBtnThird.setOnClickListener(this);
 
         mBtnClose = findViewById(R.id.btn_close);
         mBtnClose.setOnClickListener(this);
@@ -45,12 +49,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.btn_first:
                 Log.d(TAG, "## onClick ## first");
-                onFirstClicked();
+                onClickedActivity(FirstActivity.class);
                 break;
 
             case R.id.btn_second:
                 Log.d(TAG, "## onClick ## second");
-                onSecondClicked();
+//                onSecondClicked();
+                onClickedActivity(SecondActivity.class);
+                break;
+
+            case R.id.btn_third:
+                Log.d(TAG, "## onClick ## third");
+                onClickedActivity(ThirdActivity.class);
                 break;
 
             case R.id.btn_close:
@@ -58,6 +68,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 finish();
                 break;
         }
+    }
+
+    private void onClickedActivity(Class<?> cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
     }
 
     private void onFirstClicked() {
@@ -69,4 +84,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
     }
+
+
 }
