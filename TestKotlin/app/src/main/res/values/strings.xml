@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestKotlin</string>
+
+    <string name="label_first">First Activity</string>
+    <string name="label_second">Second Activity</string>
+    <string name="label_third">Third Activity</string>
+    <string name="label_start">START</string>
+    <string name="label_repeat">REPEAT</string>
+    <string name="label_stop">STOP</string>
+    <string name="label_close">CLOSE</string>
+    <string name="label_loading">Loading...</string>
+    <string name="message_image_loading">Preparing Bitmap sample...</string>
+</resources>
