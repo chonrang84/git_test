@@ -15,6 +15,10 @@ class FirstActivity : BaseActivity(), View.OnClickListener {
         setContentView(R.layout.activity_first)
         mBtnStart = findViewById(R.id.btn_start)
         mBtnStart?.setOnClickListener(this)
+        // same code
+//        if (mBtnStart != null) {
+//            mBtnStart!!.setOnClickListener(this)
+//        }
         mBtnClose = findViewById(R.id.btn_close)
         mBtnClose?.setOnClickListener(this)
     }
