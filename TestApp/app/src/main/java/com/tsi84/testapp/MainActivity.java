@@ -1,6 +1,5 @@
 package com.tsi84.testapp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +12,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button mBtnFirst;
     Button mBtnSecond;
     Button mBtnThird;
+    Button mBtnService;
     Button mBtnClose;
 
     @Override
@@ -28,6 +28,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         mBtnThird = findViewById(R.id.btn_third);
         mBtnThird.setOnClickListener(this);
+
+        mBtnService = findViewById(R.id.btn_service);
+        mBtnService.setOnClickListener(this);
 
         mBtnClose = findViewById(R.id.btn_close);
         mBtnClose.setOnClickListener(this);
@@ -63,6 +66,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 onClickedActivity(ThirdActivity.class);
                 break;
 
+            case R.id.btn_service:
+                Log.d(TAG, "## onClick ## service");
+                onClickedActivity(ServiceActivity.class);
+                break;
+
             case R.id.btn_close:
                 Log.d(TAG, "## onClick ## close");
                 finish();
@@ -74,16 +82,4 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
     }
-
-    private void onFirstClicked() {
-        Intent intent = new Intent(this, FirstActivity.class);
-        startActivity(intent);
-    }
-
-    private void onSecondClicked() {
-        Intent intent = new Intent(this, SecondActivity.class);
-        startActivity(intent);
-    }
-
-
 }
