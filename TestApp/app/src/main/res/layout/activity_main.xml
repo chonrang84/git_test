@@ -35,6 +35,12 @@
         android:text="@string/label_service" />
 
     <Button
+        android:id="@+id/btn_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_receiver" />
+
+    <Button
         android:id="@+id/btn_close"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

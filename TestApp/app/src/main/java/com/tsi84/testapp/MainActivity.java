@@ -13,6 +13,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button mBtnSecond;
     Button mBtnThird;
     Button mBtnService;
+    Button mBtnReceiver;
     Button mBtnClose;
 
     @Override
@@ -31,6 +32,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         mBtnService = findViewById(R.id.btn_service);
         mBtnService.setOnClickListener(this);
+
+        mBtnReceiver = findViewById(R.id.btn_receiver);
+        mBtnReceiver.setOnClickListener(this);
 
         mBtnClose = findViewById(R.id.btn_close);
         mBtnClose.setOnClickListener(this);
@@ -69,6 +73,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.btn_service:
                 Log.d(TAG, "## onClick ## service");
                 onClickedActivity(ServiceActivity.class);
+                break;
+
+            case R.id.btn_receiver:
+                Log.d(TAG, "## onClick ## service");
+                onClickedActivity(ReceiverActivity.class);
                 break;
 
             case R.id.btn_close:

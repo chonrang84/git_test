@@ -5,6 +5,7 @@
     <string name="label_second">Second Activity</string>
     <string name="label_third">Third Activity</string>
     <string name="label_service">Service Activity</string>
+    <string name="label_receiver">Receiver Activity</string>
     <string name="label_start">START</string>
     <string name="label_repeat">REPEAT</string>
     <string name="label_stop">STOP</string>
