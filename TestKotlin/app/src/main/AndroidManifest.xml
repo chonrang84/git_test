@@ -9,34 +9,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.tsi84.testkotlin.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tsi84.testkotlin.FirstActivity">
+        <activity android:name=".FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.ACTIVITY_TEST" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tsi84.testkotlin.SecondActivity">
+        <activity android:name=".SecondActivity">
             <intent-filter>
                 <action android:name="android.intent.action.ACTIVITY_TEST" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.tsi84.testkotlin.ThirdActivity">
+        <activity android:name=".ThirdActivity">
             <intent-filter>
                 <action android:name="android.intent.action.ACTIVITY_TEST" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".ServiceActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTIVITY_TEST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReceiverActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTIVITY_TEST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Service -->
+        <service android:name=".service.MusicService">
+        </service>
     </application>
 
 </manifest>

@@ -4,10 +4,14 @@
     <string name="label_first">First Activity</string>
     <string name="label_second">Second Activity</string>
     <string name="label_third">Third Activity</string>
+    <string name="label_service">Service Activity</string>
+    <string name="label_receiver">Receiver Activity</string>
     <string name="label_start">START</string>
     <string name="label_repeat">REPEAT</string>
     <string name="label_stop">STOP</string>
     <string name="label_close">CLOSE</string>
     <string name="label_loading">Loading...</string>
+    <string name="label_service_start">Service Start</string>
+    <string name="label_service_stop">Service Stop</string>
     <string name="message_image_loading">Preparing Bitmap sample...</string>
 </resources>

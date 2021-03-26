@@ -10,6 +10,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     var mBtnFirst: Button? = null
     var mBtnSecond: Button? = null
     var mBtnThird: Button? = null
+    var mBtnService: Button? = null
+    var mBtnReceiver: Button? = null
     var mBtnClose: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +23,10 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         mBtnSecond?.setOnClickListener(this)
         mBtnThird = findViewById(R.id.btn_third)
         mBtnThird?.setOnClickListener(this)
+        mBtnService = findViewById(R.id.btn_service)
+        mBtnService?.setOnClickListener(this)
+        mBtnReceiver = findViewById(R.id.btn_receiver)
+        mBtnReceiver?.setOnClickListener(this)
         mBtnClose = findViewById(R.id.btn_close)
         mBtnClose?.setOnClickListener(this)
 
@@ -50,6 +56,14 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             R.id.btn_third -> {
                 Log.d(TAG, "## onClick ## third")
                 onClickedActivity(ThirdActivity::class.java)
+            }
+            R.id.btn_service -> {
+                Log.d(TAG, "## onClick ## service")
+                onClickedActivity(ServiceActivity::class.java)
+            }
+            R.id.btn_receiver -> {
+                Log.d(TAG, "## onClick ## receiver")
+                onClickedActivity(ReceiverActivity::class.java)
             }
             R.id.btn_close -> {
                 Log.d(TAG, "## onClick ## close")
