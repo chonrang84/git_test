@@ -33,11 +33,13 @@ class ServiceActivity: BaseActivity(), View.OnClickListener {
     }
 
     private fun startMusicService() {
+        // start MusicService
         val intent = Intent(this, MusicService::class.java)
         startService(intent)
     }
 
     private fun stopMusicService() {
+        // stop MusicService
         val intent = Intent(this, MusicService::class.java)
         stopService(intent)
     }

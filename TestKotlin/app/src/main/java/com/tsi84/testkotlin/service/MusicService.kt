@@ -9,9 +9,11 @@ import com.tsi84.testkotlin.R
 
 class MusicService: Service() {
     private val TAG = MusicService::class.java.simpleName
-    private var mPlayer: MediaPlayer? = null
+    private var mPlayer: MediaPlayer? = null    // sample play for MediaPlayer
 
     override fun onBind(intent: Intent?): IBinder? {
+        // Return the communication channel to the service.
+        // May return null if clients can not bind to the service.
         return null
     }
 
@@ -20,16 +22,16 @@ class MusicService: Service() {
         Log.d(TAG, "onCreate")
 
         // mp3 sample url
-        // https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3
-        mPlayer = MediaPlayer.create(this, R.raw.sample)
-        mPlayer!!.isLooping = true
+        // https://drive.google.com/file/d/1IDl3bUKMBOcpbvQu6I2g95iqnYyQ0qvf/view?usp=sharing
+        mPlayer = MediaPlayer.create(this, R.raw.sample)    // play file: sample.mp3
+        mPlayer!!.isLooping = true  // looping
     }
 
     override fun onDestroy() {
         Log.d(TAG, "onDestroy")
         if (mPlayer != null) {
             Log.d(TAG, "Music stopped..")
-            mPlayer!!.stop()
+            mPlayer!!.stop()    // player stop
         }
         super.onDestroy()
     }
@@ -37,7 +39,7 @@ class MusicService: Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         if (mPlayer != null) {
             Log.d(TAG, "onStartCommand - Music start!!")
-            mPlayer!!.start()
+            mPlayer!!.start()   // player start
         }
         return super.onStartCommand(intent, flags, startId)
     }
