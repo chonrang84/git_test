@@ -10,10 +10,12 @@ import com.tsi84.testapp.R;
 
 public class MusicService extends Service {
     private static final String TAG = MusicService.class.getSimpleName();
-    private MediaPlayer mPlayer;
+    private MediaPlayer mPlayer;    // sample play for MediaPlayer
 
     @Override
     public IBinder onBind(Intent intent) {
+        // Return the communication channel to the service.
+        // May return null if clients can not bind to the service.
         return null;
     }
 
@@ -23,9 +25,9 @@ public class MusicService extends Service {
         Log.d(TAG, "onCreate");
 
         // mp3 sample url
-        // https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3
-        mPlayer = MediaPlayer.create(this, R.raw.sample);
-        mPlayer.setLooping(true);
+        // https://drive.google.com/file/d/1IDl3bUKMBOcpbvQu6I2g95iqnYyQ0qvf/view?usp=sharing
+        mPlayer = MediaPlayer.create(this, R.raw.sample);   // play file: sample.mp3
+        mPlayer.setLooping(true);   // looping
     }
 
     @Override
@@ -33,7 +35,7 @@ public class MusicService extends Service {
         Log.d(TAG, "onDestroy");
         if (mPlayer != null) {
             Log.d(TAG, "Music stopped..");
-            mPlayer.stop();
+            mPlayer.stop();     // player stop
         }
 
         super.onDestroy();
@@ -43,7 +45,7 @@ public class MusicService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         if (mPlayer != null) {
             Log.d(TAG, "onStartCommand - Music start!!");
-            mPlayer.start();
+            mPlayer.start();    // player start
         }
 
         return super.onStartCommand(intent, flags, startId);

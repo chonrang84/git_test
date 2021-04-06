@@ -48,11 +48,13 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void startMusicService() {
+        // start MusicService
         Intent intent = new Intent(this, MusicService.class);
         startService(intent);
     }
 
     private void stopMusicService() {
+        // stop MusicService
         Intent intent = new Intent(this, MusicService.class);
         stopService(intent);
     }

@@ -76,7 +76,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
 
             case R.id.btn_receiver:
-                Log.d(TAG, "## onClick ## service");
+                Log.d(TAG, "## onClick ## receiver");
                 onClickedActivity(ReceiverActivity.class);
                 break;
 
