@@ -7,14 +7,20 @@ import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 
 class ReceiverActivity: BaseActivity() {
     private val TAG = ReceiverActivity::class.java.simpleName
+    lateinit var mTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate")
+
+        setContentView(R.layout.activity_receiver)
+        mTextView = findViewById(R.id.receiver_text)
+
         registerReceiver()
     }
 
@@ -47,9 +53,11 @@ class ReceiverActivity: BaseActivity() {
                 if (!noConnectivity) {
                     Log.d(TAG, "connected")
                     Toast.makeText(applicationContext, "wifi on", Toast.LENGTH_LONG).show()
+                    mTextView?.text = "wifi on"
                 } else {
                     Log.d(TAG, "disconnected")
                     Toast.makeText(applicationContext, "wifi off", Toast.LENGTH_LONG).show()
+                    mTextView?.text = "wifi off"
                 }
             }
         }
