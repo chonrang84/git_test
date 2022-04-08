@@ -8,11 +8,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = MainActivity.class.getSimpleName();
 
     Button mBtnStart = null;
     Button mBtnStop = null;
+    LottieAnimationView mViewAnim = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mBtnStart.setOnClickListener(this);
         mBtnStop.setOnClickListener(this);
+
+        mViewAnim = findViewById(R.id.image_anim);
     }
 
     @Override
@@ -33,10 +38,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case R.id.btn_start:
                 startMusicService();
+                // lottie play animation
+                mViewAnim.playAnimation();
                 break;
 
             case R.id.btn_stop:
                 stopMusicService();
+                // lottie pause animation
+                mViewAnim.pauseAnimation();
                 break;
         }
     }
