@@ -13,11 +13,12 @@ Activity, Service, BroadcastReceiver, RxJava (Java / Kotlin)
    - RxJava sample		
 
 → ServiceActivity
-   - Service sample
+   - Service & Lottie sample
 
 → ReceiverActivity
    - BroadcastReceiver sample
 
 OpenSource
 implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+implementation 'com.airbnb.android:lottie:5.0.3'
 
