@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.tsi84.testapp.service.MusicService;
 
 public class ServiceActivity extends BaseActivity implements View.OnClickListener {
@@ -14,6 +15,7 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
     Button mBtnServiceStart;
     Button mBtnServiceStop;
     Button mBtnClose;
+    LottieAnimationView mViewAnim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
 
         mBtnClose = findViewById(R.id.btn_close);
         mBtnClose.setOnClickListener(this);
+
+        mViewAnim = findViewById(R.id.image_anim);
     }
 
     @Override
@@ -51,11 +55,15 @@ public class ServiceActivity extends BaseActivity implements View.OnClickListene
         // start MusicService
         Intent intent = new Intent(this, MusicService.class);
         startService(intent);
+        // lottie play animation
+        mViewAnim.playAnimation();
     }
 
     private void stopMusicService() {
         // stop MusicService
         Intent intent = new Intent(this, MusicService.class);
         stopService(intent);
+        // lottie pause animation
+        mViewAnim.pauseAnimation();
     }
 }
