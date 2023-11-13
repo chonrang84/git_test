@@ -18,6 +18,8 @@ public class ReceiverActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate");
 
+        setContentView(R.layout.activity_receiver);
+
         registerReceiver();
     }
 
@@ -53,10 +55,10 @@ public class ReceiverActivity extends BaseActivity {
                         ConnectivityManager.EXTRA_NO_CONNECTIVITY, false);
                 if (!noConnectivity) {
                     Log.d(TAG, "connected");
-                    Toast.makeText(getApplicationContext(), "wifi on", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "wifi connected", Toast.LENGTH_LONG).show();
                 } else {
                     Log.d(TAG, "disconnected");
-                    Toast.makeText(getApplicationContext(), "wifi off", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "wifi disconnected", Toast.LENGTH_LONG).show();
                 }
             }
         }
