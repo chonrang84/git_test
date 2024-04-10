@@ -22,4 +22,3 @@ OpenSource
 implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 implementation 'com.airbnb.android:lottie:5.0.3'
 
-test complete
